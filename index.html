@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quotes</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+	<div class="head"> My Favourite Quotes:</div>
+	<div id="post">"    "</div>
+	 <div class="btn"><button id="btn">Press for a new Quote!</button></div>
+<div class="sci">
+<ul>
+
+        <li><a href="#"><img src="facebook.png" height="50px" width="50px" alt=""> </a> </li>
+        <li><a href="#"><img src="instagram.png"   height="50px" width="50px" alt=""> </a> </li>
+        <li><a href="#"><img src="twitter.png"   height="50px" width="50px" alt=""> </a> </li>
+      </ul>
+  </div>
+
+
+</div>
+</body>
+<script>
+let btn = document.getElementById('btn');
+let output = document.getElementById('post');
+let quotes = [
+    '“Dont be pushed around by the fears in your mind. Be led by the dreams in your heart.” -Roy T. Bennet',
+   '“More smiling, less worrying. More compassion, less judgment. More blessed, less stressed. More love, less hate.” -Roy T. Bennett',
+    '“Instead of worrying about what you cannot control, shift your energy to what you can create.” -Roy T. Bennet',
+    '“It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform.”- Ganga',
+    '“Take responsibility of your own happiness, never put it in other people’s hands.” -mr.salt',
+    '“Be the reason someone smiles. Be the reason someone feels loved and believes in the goodness in people.”-Steve Rommannof',
+    '“Be mindful. Be grateful. Be positive. Be true. Be kind.”-Natasa ',
+    '“Entrepreneurs Are Great At Dealing With Uncertainty And Also Very Good At Minimizing Risk. That’s The Classic Entrepreneur.” – Mohnish Pabrai',
+    '“Accept yourself, love yourself, and keep moving forward. If you want to fly, you have to give up what weighs you down.”-Scot Lean',
+    '“Live the Life of Your Dreams: Be brave enough to live the life of your dreams according to your vision and purpose instead of the expectations and opinions of others.”-Roy T. Bennet',
+];
+
+btn.addEventListener('click', function(){
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    output.innerHTML = randomQuote;
+})
+
+
+</script>
+</html>
